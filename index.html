@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows XP Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/xp.css/dist/XP.css">
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="icon1" class="desktop-icon" data-window="#window1">
+      <img src="./sources/icons/about.png">
+      <span>Ventana 1</span>
+    </div>
+    <div id="icon2" class="desktop-icon" data-window="#window2">
+      <img src="./sources/icons/proyect.png">
+      <span>Ventana 2</span>
+    </div>
+    <div id="icon3" class="desktop-icon" data-window="#window3">
+      <img src="./sources/icons/randomicon.png">
+      <span>Ventana 3</span>
+    </div>
+    <div id="icon4" class="desktop-icon" data-window="#window4">
+      <img src="./sources/icons/musicplayer.png">
+      <span>MusicPlayer</span>
+    </div>
+    <div id="icon5" class="desktop-icon" data-window="#window5">
+      <img src="./sources/icons/skills.png">
+      <br>
+      <span>Ventana 4</span>
+    </div>
+    <div id="icon6" class="desktop-icon" data-window="#window6">
+      <img src="./sources/icons/contact.png">
+      <span>Ventana 5</span>
+    </div>
+
+    <div id="window1" class="window window--active">
+      <div class="title-bar">
+        <div class="title-bar-text">Ventana 1</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        
+      </div>
+    </div>
+    <div id="window2" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Ventana 2</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+
+      </div>
+    </div>
+    <div id="window3" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Ventana 3</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+      </div>
+    </div>
+    <div id="window4" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">MusicPlayer</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+          <select id="song-list" onchange="loadSong(this.value)">
+              <option value="./sources/song1.mp3">Canción 1</option>
+              <option value="./sources/song2.mp3">Canción 2</option>
+              <option value="./sources/song3.mp3">Canción 3</option>
+            </select>
+        <h3 id="song-title"></h3>
+        <audio id="audioPlayer" src=""></audio>
+        <div class="music-controls">
+          <button class="xp-btn" onclick="playMusic()">▶ Play</button>
+          <button class="xp-btn" onclick="pauseMusic()">⏸ Pause</button>
+          <button class="xp-btn" onclick="stopMusic()">⏹ Stop</button>
+        </div>
+        <div class="progress-bar">
+          <div id="progress" class="progress-bar-inner"></div>
+        </div>
+        <div class="time-display">
+          <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+        </div>
+        <input id="volume-slider" type="range" class="volume-slider" min="0" max="1" step="0.1" value="1" onchange="setVolume(this.value)">
+        
+      </div>
+    </div>
+    <div id="window5" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Ventana 4</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        
+      </div>
+    </div>
+    <div id="window6" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Ventana 5</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize" class="minimize"></button>
+          <button aria-label="Maximize" class="maximize"></button>
+          <button aria-label="Close" class="close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        
+      </div>
+    </div>
+
+
+    
+    <div id="taskbar">
+      <div class="start-button">
+      </div>
+      <div class="taskbar-items">
+      </div>
+      <div class="tray-icon"><a href="index_en.html" class="linkeo_id">ESP</a></div>
+      <div class="taskbar-clock" id="taskbar-clock">
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
